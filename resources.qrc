@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>images/app_icon.png</file>
+        <file>images/ic_nl.png</file>
+        <file>images/ic_ru.png</file>
+        <file>images/ic_us.png</file>
+        <file>images/sig_best.png</file>
+        <file>images/sig_good.png</file>
+        <file>images/sig_low.png</file>
+        <file>images/sig_mid.png</file>
+        <file>images/sig_unknown.png</file>
+        <file>images/ic_unknown.png</file>
+    </qresource>
+</RCC>
