@@ -3,6 +3,7 @@
 #include "tundev.h"
 #include <QtCore/qthread.h>
 #include <netdb.h>
+#include <QInputDialog>
 
 std::mutex Server::m_Mutex;
 Server* Server::m_pSelf = nullptr;
@@ -21,6 +22,17 @@ Server::~Server()
 
 bool Server::handshake(QString serverAddress)
 {
+    if (m_sRootPassword.empty())
+    {
+        bool ok;
+        QString text = QInputDialog::getText(nullptr, tr("root password"),
+                                             tr("root password:"), QLineEdit::Password,
+                                             "", &ok);
+        if (ok)
+        {
+            m_sRootPassword = text.toStdString();
+        }
+    }
     if (m_pSocket)
     {
         m_pSocket->disconnectFromHost();

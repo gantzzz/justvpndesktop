@@ -11,7 +11,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt5 COMPONENTS Widgets Network REQUIRED)
+find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets Network REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets Network REQUIRED)
 find_package(Threads REQUIRED)
 
 add_executable( justvpndesktop
@@ -28,4 +29,4 @@ add_executable( justvpndesktop
                 resources.qrc
                 )
 
-target_link_libraries(justvpndesktop PRIVATE Qt5::Widgets Qt5::Network Threads::Threads)
+target_link_libraries(justvpndesktop PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Network Threads::Threads)

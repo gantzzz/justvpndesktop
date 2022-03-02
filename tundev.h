@@ -25,10 +25,12 @@
 #define TUN_NET "10.0.0.%d"
 using namespace std;
 
+extern string m_sRootPassword = "";
+
 namespace tundev
 {
 #ifdef __APPLE__
-    static int open_tun_socket (char* if_name, size_t if_name_size)
+    static int open_tun_socket ()
     {
         struct sockaddr_ctl addr;
         struct ctl_info info;
@@ -53,7 +55,7 @@ namespace tundev
         addr.sc_family = AF_SYSTEM;
         addr.ss_sysaddr = AF_SYS_CONTROL;
         addr.sc_id = info.ctl_id;
-        addr.sc_unit = 0;
+        addr.sc_unit = 99;
 
         err = connect(fd, (struct sockaddr *)&addr, sizeof (addr));
         if (err != 0)
@@ -80,9 +82,108 @@ namespace tundev
             close(fd);
             return err;
         }
-        strncpy(if_name, ifname, if_name_size);
+        //strncpy(if_name, ifname, if_name_size);
         return fd;
     }
+
+    static string get_default_gateway()
+    {
+        std::array<char, 1024> buffer;
+        std::string line;
+        std::unique_ptr<FILE, decltype(&pclose)> pipe(popen("route -n get default", "r"), pclose);
+
+        if (!pipe)
+        {
+            throw std::runtime_error("popen() failed!");
+        }
+        while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr)
+        {
+            line = buffer.data();
+            string sFindStrGtw = "gateway: ";
+            if (line.find(sFindStrGtw) != string::npos) // this is masquerade line
+            {
+                string gateway = line.substr(line.find(sFindStrGtw) + sFindStrGtw.length());
+                gateway.erase(std::remove(gateway.begin(), gateway.end(), '\n'), gateway.end());
+                return gateway;
+            }
+        }
+        return "";
+    }
+
+    static void protect (string sServerAddress)
+    {
+        auto defaultGW = get_default_gateway();
+        string sCmd = string("echo ") + m_sRootPassword + " | " + string("sudo -S ") + string("route add ") + sServerAddress + " " + defaultGW;
+        std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(sCmd.c_str(), "r"), pclose);
+        
+        std::array<char, 1024> buffer;
+        std::string line;
+
+        if (!pipe)
+        {
+            throw std::runtime_error("popen() failed!");
+        }
+        while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr)
+        {
+            line = buffer.data();
+        }
+    }
+
+    static void unset_default_route(string sRoute)
+    {
+        
+    }
+
+    static void set_tun_address(string sAddr)
+    {
+        auto defaultGW = get_default_gateway();
+        string sCmd = string("echo ") + m_sRootPassword + " | " + string("sudo -S ") + string("ifconfig utun98 up ") + sAddr + " " + sAddr;
+        std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(sCmd.c_str(), "r"), pclose);
+        
+        std::array<char, 1024> buffer;
+        std::string line;
+
+        if (!pipe)
+        {
+            throw std::runtime_error("popen() failed!");
+        }
+        while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr)
+        {
+            line = buffer.data();
+        }
+    }
+
+    static void set_default_route(string sAddr)
+    {
+        
+    }
+
+    static void set_ip_forward()
+    {
+        string sCmd = string("echo ") + m_sRootPassword + " | " + string("sudo -S sysctl -w net.inet.ip.forwarding=1");
+        std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(sCmd.c_str(), "r"), pclose);
+        
+        std::array<char, 1024> buffer;
+        std::string line;
+
+        if (!pipe)
+        {
+            throw std::runtime_error("popen() failed!");
+        }
+        while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr)
+        {
+            line = buffer.data();
+        }
+        
+        
+        
+    }
+
+    static int set_iptables_masquerade()
+    {
+        
+    }
+
 
 #elif defined __linux__
 

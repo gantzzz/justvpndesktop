@@ -6,6 +6,7 @@
 #include <QString>
 #include <QtNetwork/QUdpSocket>
 #include <thread>
+#include <string.h>
 
 class Server : public QObject
 {
@@ -25,6 +26,7 @@ public:
         return m_pSelf;
     }
     bool handshake(QString serverAddress);
+
 private:
     Server();
     ~Server();
