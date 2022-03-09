@@ -10,6 +10,7 @@
 * mkdir build
 * cd build
 * cmake ../
+* make
 
 ## Android client available at Gplay https://play.google.com/store/apps/details?id=online.justvpn
 
