@@ -27,6 +27,7 @@ using namespace std;
 
 extern string m_sRootPassword = "";
 extern string m_sDefaultRoute = ""; // system default route
+extern string m_sDevice = "";       // internet device
 
 namespace tundev
 {
@@ -204,14 +205,6 @@ namespace tundev
         }
     }
 
-    static void restore_default_route()
-    {
-        if (!m_sDefaultRoute.empty())
-        {
-            set_default_route(m_sDefaultRoute);
-        }
-    }
-
 
 #elif defined __linux__
 
@@ -247,6 +240,40 @@ namespace tundev
         return 0;
     }
 
+    static void unprotect (string sServerAddress)
+    {
+        int sockfd;
+        struct rtentry rt;
+
+        sockfd = socket(AF_INET, SOCK_DGRAM, 0);
+        if (sockfd == -1)
+        {
+            perror("socket creation failed\n");
+            return;
+        }
+
+        struct sockaddr_in *sockinfo = (struct sockaddr_in *)&rt.rt_gateway;
+        sockinfo->sin_family = AF_INET;
+        sockinfo->sin_addr.s_addr = inet_addr(m_sDefaultRoute.c_str());
+
+        sockinfo  = (struct sockaddr_in *)&rt.rt_dst;
+        sockinfo->sin_family = AF_INET;
+        sockinfo->sin_addr.s_addr = inet_addr(sServerAddress.c_str());
+
+        sockinfo = (struct sockaddr_in *)&rt.rt_genmask;
+        sockinfo->sin_family = AF_INET;
+        sockinfo->sin_addr.s_addr = inet_addr("255.255.255.255");
+
+        rt.rt_dev = (char*)m_sDevice.c_str();
+        rt.rt_flags = RTF_UP | RTF_GATEWAY | RTF_HOST;
+        rt.rt_metric = 0;
+
+        if(ioctl(sockfd, SIOCDELRT, &rt) < 0 )
+        {
+            perror("ioctl");
+        }
+    }
+
     static void protect (string sServerAddress)
     {
         int sockfd;
@@ -259,6 +286,9 @@ namespace tundev
             perror("could not get default gateway\n");
             return;
         }
+
+        m_sDevice = device;
+        m_sDefaultRoute = gateway;
 
         sockfd = socket(AF_INET, SOCK_DGRAM, 0);
         if (sockfd == -1)
@@ -279,7 +309,7 @@ namespace tundev
         sockinfo->sin_family = AF_INET;
         sockinfo->sin_addr.s_addr = inet_addr("255.255.255.255");
 
-        rt.rt_dev = device;
+        rt.rt_dev = (char*)m_sDevice.c_str();
         rt.rt_flags = RTF_UP | RTF_GATEWAY;
         rt.rt_metric = 0;
 
@@ -289,7 +319,7 @@ namespace tundev
         }
     }
 
-    static void unset_default_route(string sRoute)
+    static void unset_default_route()
     {
         int sockfd;
         struct rtentry rt;
@@ -303,7 +333,7 @@ namespace tundev
 
         struct sockaddr_in *sockinfo = (struct sockaddr_in *)&rt.rt_gateway;
         sockinfo->sin_family = AF_INET;
-        sockinfo->sin_addr.s_addr = inet_addr(sRoute.c_str());
+        sockinfo->sin_addr.s_addr = inet_addr("0.0.0.0");
 
         sockinfo = (struct sockaddr_in *)&rt.rt_dst;
         sockinfo->sin_family = AF_INET;
@@ -325,6 +355,7 @@ namespace tundev
 
     static void set_default_route(string sRoute)
     {
+        unset_default_route();
         int sockfd;
         struct rtentry rt;
 
@@ -422,6 +453,14 @@ namespace tundev
     }
 
 #endif // ifdef __APPLE__
+
+    static void restore_default_route()
+    {
+        if (!m_sDefaultRoute.empty())
+        {
+            set_default_route(m_sDefaultRoute);
+        }
+    }
 }
 
 
