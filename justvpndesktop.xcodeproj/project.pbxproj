@@ -1,0 +1,1153 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4F2C75305F514CDBB6BEDD0B /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 39C23747F2644ED9A1B582E6 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				52701136BDFBC3049A0729E4 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		ACC41F04BC1B40A2900F14B1 /* justvpndesktop_autogen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 48A6411062D64231A67FA675 /* Build configuration list for PBXAggregateTarget "justvpndesktop_autogen" */;
+			buildPhases = (
+				B5054741EF05785155A89EBD /* Generate CMakeFiles/justvpndesktop_autogen */,
+			);
+			dependencies = (
+				CC744D29A7814A99A6CDBB12 /* PBXTargetDependency */,
+			);
+			name = justvpndesktop_autogen;
+			productName = justvpndesktop_autogen;
+		};
+		FC5DDC76FA934B1C8A5E017C /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C761F94556994B3CBF4C9C7C /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				6243597354425ECCE19AEB1B /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				90B3EEEF77A94705BC0D0AA3 /* PBXTargetDependency */,
+				7CB1527726FD4AF3A3CB8A0E /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		03FD60358D474D9D92B10E0C /* mainwindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89B148C237E540D6B7C0AB23 /* mainwindow.cpp */; };
+		4E9FA41B1DC74C41A04F9A8C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE902961CBD54A9090CB7846 /* main.cpp */; };
+		905D7504AF5A497788EFE6D5 /* serverslistitemdelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A29DE2173846AF863FA94D /* serverslistitemdelegate.cpp */; };
+		C306B52ECB92493594A2DBEC /* server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9902304E24154E04932915A6 /* server.cpp */; };
+		F9C8919679F6420BB507C3FD /* qrc_resources.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCA90045EC144D83ABED6A46 /* qrc_resources.cpp */; };
+		FB70B2E3309F4ED0A93CF6B9 /* mocs_compilation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A376CF63E46B5BABE94D6 /* mocs_compilation.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E6F2053C288449BB9C80C3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49BDF375B1764F5AAA9E8EAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F2C75305F514CDBB6BEDD0B;
+			remoteInfo = ZERO_CHECK;
+		};
+		58A546C6575F49FD8249E1BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49BDF375B1764F5AAA9E8EAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F2C75305F514CDBB6BEDD0B;
+			remoteInfo = ZERO_CHECK;
+		};
+		8453FCCD5E164CDA9DDD7B9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49BDF375B1764F5AAA9E8EAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F2C75305F514CDBB6BEDD0B;
+			remoteInfo = ZERO_CHECK;
+		};
+		CA5493DF766E4A05B6389669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49BDF375B1764F5AAA9E8EAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE6C596E22AE4170B71DC076;
+			remoteInfo = justvpndesktop;
+		};
+		FEB9C82B54CF4D13B36B51E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49BDF375B1764F5AAA9E8EAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACC41F04BC1B40A2900F14B1;
+			remoteInfo = justvpndesktop_autogen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14A29DE2173846AF863FA94D /* serverslistitemdelegate.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = serverslistitemdelegate.cpp; sourceTree = SOURCE_ROOT; };
+		22C14E898160487682836B99 /* ui_mainwindow.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ui_mainwindow.h; path = justvpndesktop_autogen/include/ui_mainwindow.h; sourceTree = SOURCE_ROOT; };
+		4D22BC19613A40869E24F4E8 /* serverslistitemdelegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = serverslistitemdelegate.h; sourceTree = SOURCE_ROOT; };
+		4F0A376CF63E46B5BABE94D6 /* mocs_compilation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mocs_compilation.cpp; path = justvpndesktop_autogen/mocs_compilation.cpp; sourceTree = SOURCE_ROOT; };
+		5A061D5C09CE41FC8AEBA414 /* tundev.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = tundev.h; sourceTree = SOURCE_ROOT; };
+		62FA0553B71F4F5889AD7C0E /* resources.qrc */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; path = resources.qrc; sourceTree = SOURCE_ROOT; };
+		754FAD841B4140499261EA2D /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		89B148C237E540D6B7C0AB23 /* mainwindow.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = mainwindow.cpp; sourceTree = SOURCE_ROOT; };
+		9902304E24154E04932915A6 /* server.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = server.cpp; sourceTree = SOURCE_ROOT; };
+		A05553F476A34E238EB0A809 /* qrc_resources.cpp.rule */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = qrc_resources.cpp.rule; path = justvpndesktop_autogen/EWIEGA46WW/qrc_resources.cpp.rule; sourceTree = SOURCE_ROOT; };
+		A3B8313026E74EDB950CA969 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		C2D27825EC5B4874A052B217 /* mainwindow.ui */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; path = mainwindow.ui; sourceTree = SOURCE_ROOT; };
+		CCA90045EC144D83ABED6A46 /* qrc_resources.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = qrc_resources.cpp; path = justvpndesktop_autogen/EWIEGA46WW/qrc_resources.cpp; sourceTree = SOURCE_ROOT; };
+		D87A8A2C73B74133AF770B20 /* mainwindow.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = mainwindow.h; sourceTree = SOURCE_ROOT; };
+		DCB6772A4EF742CC9D327434 /* serverdatamodel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = serverdatamodel.h; sourceTree = SOURCE_ROOT; };
+		E4067FE323574A409F97FFBB /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		E5AECF9AA74248A28B434872 /* justvpndesktop */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = justvpndesktop; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5B65679004F4B4A9A53E5FA /* server.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = server.h; sourceTree = SOURCE_ROOT; };
+		FE902961CBD54A9090CB7846 /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = main.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F97B88D78FE64A48B5701955 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C49426D1C274AECBF7234D2 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		1320492C2E6E409ABEC648AA /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		184AD14AAF24484FA3D7E8FD /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				22C14E898160487682836B99 /* ui_mainwindow.h */,
+				D87A8A2C73B74133AF770B20 /* mainwindow.h */,
+				E5B65679004F4B4A9A53E5FA /* server.h */,
+				DCB6772A4EF742CC9D327434 /* serverdatamodel.h */,
+				4D22BC19613A40869E24F4E8 /* serverslistitemdelegate.h */,
+				5A061D5C09CE41FC8AEBA414 /* tundev.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		1F62976DE9DB4EB8AE0026F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5AECF9AA74248A28B434872 /* justvpndesktop */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A70070CB80C404E9C614DC9 /* justvpndesktop */ = {
+			isa = PBXGroup;
+			children = (
+				FD45AA78BBAC490FADBD7C02 /* Source Files */,
+				184AD14AAF24484FA3D7E8FD /* Header Files */,
+				CFC449EA8D08486583BB0DF4 /* CMake Rules */,
+				E4067FE323574A409F97FFBB /* CMakeLists.txt */,
+				C2D27825EC5B4874A052B217 /* mainwindow.ui */,
+				62FA0553B71F4F5889AD7C0E /* resources.qrc */,
+			);
+			name = justvpndesktop;
+			sourceTree = "<group>";
+		};
+		5A8B455B40434D66AE292952 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85C285311E38437096681ECC = {
+			isa = PBXGroup;
+			children = (
+				4A70070CB80C404E9C614DC9 /* justvpndesktop */,
+				C11A32283B37424E92DE4388 /* justvpndesktop_autogen */,
+				B721A2A8B91B4C50A45C9C78 /* ALL_BUILD */,
+				1F62976DE9DB4EB8AE0026F9 /* Products */,
+				5A8B455B40434D66AE292952 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B721A2A8B91B4C50A45C9C78 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				0C49426D1C274AECBF7234D2 /* CMake Rules */,
+				754FAD841B4140499261EA2D /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		C11A32283B37424E92DE4388 /* justvpndesktop_autogen */ = {
+			isa = PBXGroup;
+			children = (
+				1320492C2E6E409ABEC648AA /* CMake Rules */,
+				A3B8313026E74EDB950CA969 /* CMakeLists.txt */,
+			);
+			name = justvpndesktop_autogen;
+			sourceTree = "<group>";
+		};
+		CFC449EA8D08486583BB0DF4 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+				A05553F476A34E238EB0A809 /* qrc_resources.cpp.rule */,
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		FD45AA78BBAC490FADBD7C02 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCA90045EC144D83ABED6A46 /* qrc_resources.cpp */,
+				4F0A376CF63E46B5BABE94D6 /* mocs_compilation.cpp */,
+				FE902961CBD54A9090CB7846 /* main.cpp */,
+				89B148C237E540D6B7C0AB23 /* mainwindow.cpp */,
+				9902304E24154E04932915A6 /* server.cpp */,
+				14A29DE2173846AF863FA94D /* serverslistitemdelegate.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE6C596E22AE4170B71DC076 /* justvpndesktop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5D1C20E8E574C2CBC291DAD /* Build configuration list for PBXNativeTarget "justvpndesktop" */;
+			buildPhases = (
+				B25F964592DC2B17192CF21D /* Generate justvpndesktop_autogen/EWIEGA46WW/qrc_resources.cpp */,
+				0B570F7322FA4C3FB48D250A /* Sources */,
+				F97B88D78FE64A48B5701955 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C59D1FDC5DC14AAD8DF4067D /* PBXTargetDependency */,
+				EFC140B4C7634084BA54E58D /* PBXTargetDependency */,
+			);
+			name = justvpndesktop;
+			productName = justvpndesktop;
+			productReference = E5AECF9AA74248A28B434872 /* justvpndesktop */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49BDF375B1764F5AAA9E8EAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1320;
+			};
+			buildConfigurationList = DD54D34633B346D3A47EA17F /* Build configuration list for PBXProject "justvpndesktop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85C285311E38437096681ECC;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC5DDC76FA934B1C8A5E017C /* ALL_BUILD */,
+				4F2C75305F514CDBB6BEDD0B /* ZERO_CHECK */,
+				DE6C596E22AE4170B71DC076 /* justvpndesktop */,
+				ACC41F04BC1B40A2900F14B1 /* justvpndesktop_autogen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52701136BDFBC3049A0729E4 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+				/Users/john/dev/justvpndesktop/CMakeFiles/ZERO_CHECK,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd /Users/john/dev/justvpndesktop\n  make -f /Users/john/dev/justvpndesktop/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd /Users/john/dev/justvpndesktop\n  make -f /Users/john/dev/justvpndesktop/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"MinSizeRel\"; then :\n  cd /Users/john/dev/justvpndesktop\n  make -f /Users/john/dev/justvpndesktop/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :\n  cd /Users/john/dev/justvpndesktop\n  make -f /Users/john/dev/justvpndesktop/CMakeScripts/ReRunCMake.make\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6243597354425ECCE19AEB1B /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+				/Users/john/dev/justvpndesktop/CMakeFiles/ALL_BUILD,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd /Users/john/dev/justvpndesktop\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd /Users/john/dev/justvpndesktop\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"MinSizeRel\"; then :\n  cd /Users/john/dev/justvpndesktop\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :\n  cd /Users/john/dev/justvpndesktop\n  echo Build\\ all\\ projects\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B25F964592DC2B17192CF21D /* Generate justvpndesktop_autogen/EWIEGA46WW/qrc_resources.cpp */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				/Users/john/Qt/6.2.3/macos/./libexec/rcc,
+				/Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json,
+				/Users/john/dev/justvpndesktop/images/app_icon.png,
+				/Users/john/dev/justvpndesktop/images/ic_nl.png,
+				/Users/john/dev/justvpndesktop/images/ic_ru.png,
+				/Users/john/dev/justvpndesktop/images/ic_unknown.png,
+				/Users/john/dev/justvpndesktop/images/ic_us.png,
+				/Users/john/dev/justvpndesktop/images/sig_best.png,
+				/Users/john/dev/justvpndesktop/images/sig_good.png,
+				/Users/john/dev/justvpndesktop/images/sig_low.png,
+				/Users/john/dev/justvpndesktop/images/sig_mid.png,
+				/Users/john/dev/justvpndesktop/images/sig_unknown.png,
+				/Users/john/dev/justvpndesktop/resources.qrc,
+			);
+			name = "Generate justvpndesktop_autogen/EWIEGA46WW/qrc_resources.cpp";
+			outputPaths = (
+				/Users/john/dev/justvpndesktop/justvpndesktop_autogen/EWIEGA46WW/qrc_resources.cpp,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd /Users/john/dev/justvpndesktop\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Debug\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Release\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json MinSizeRel\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json RelWithDebInfo\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd /Users/john/dev/justvpndesktop\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Debug\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Release\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json MinSizeRel\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json RelWithDebInfo\nfi\nif test \"$CONFIGURATION\" = \"MinSizeRel\"; then :\n  cd /Users/john/dev/justvpndesktop\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Debug\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Release\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json MinSizeRel\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json RelWithDebInfo\nfi\nif test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :\n  cd /Users/john/dev/justvpndesktop\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Debug\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Release\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json MinSizeRel\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autorcc /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json RelWithDebInfo\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B5054741EF05785155A89EBD /* Generate CMakeFiles/justvpndesktop_autogen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/justvpndesktop_autogen";
+			outputPaths = (
+				/Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen,
+				/Users/john/dev/justvpndesktop/justvpndesktop_autogen/include_Debug/ui_mainwindow.h,
+				/Users/john/dev/justvpndesktop/justvpndesktop_autogen/include_MinSizeRel/ui_mainwindow.h,
+				/Users/john/dev/justvpndesktop/justvpndesktop_autogen/include_RelWithDebInfo/ui_mainwindow.h,
+				/Users/john/dev/justvpndesktop/justvpndesktop_autogen/include_Release/ui_mainwindow.h,
+				/Users/john/dev/justvpndesktop/justvpndesktop_autogen/mocs_compilation.cpp,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd /Users/john/dev/justvpndesktop\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autogen /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutogenInfo.json Debug\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd /Users/john/dev/justvpndesktop\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autogen /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutogenInfo.json Release\nfi\nif test \"$CONFIGURATION\" = \"MinSizeRel\"; then :\n  cd /Users/john/dev/justvpndesktop\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autogen /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutogenInfo.json MinSizeRel\nfi\nif test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :\n  cd /Users/john/dev/justvpndesktop\n  /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E cmake_autogen /Users/john/dev/justvpndesktop/CMakeFiles/justvpndesktop_autogen.dir/AutogenInfo.json RelWithDebInfo\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B570F7322FA4C3FB48D250A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9C8919679F6420BB507C3FD /* qrc_resources.cpp in Sources */,
+				FB70B2E3309F4ED0A93CF6B9 /* mocs_compilation.cpp in Sources */,
+				4E9FA41B1DC74C41A04F9A8C /* main.cpp in Sources */,
+				03FD60358D474D9D92B10E0C /* mainwindow.cpp in Sources */,
+				C306B52ECB92493594A2DBEC /* server.cpp in Sources */,
+				905D7504AF5A497788EFE6D5 /* serverslistitemdelegate.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7CB1527726FD4AF3A3CB8A0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE6C596E22AE4170B71DC076 /* justvpndesktop */;
+			targetProxy = CA5493DF766E4A05B6389669 /* PBXContainerItemProxy */;
+		};
+		90B3EEEF77A94705BC0D0AA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F2C75305F514CDBB6BEDD0B /* ZERO_CHECK */;
+			targetProxy = 2E6F2053C288449BB9C80C3C /* PBXContainerItemProxy */;
+		};
+		C59D1FDC5DC14AAD8DF4067D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F2C75305F514CDBB6BEDD0B /* ZERO_CHECK */;
+			targetProxy = 58A546C6575F49FD8249E1BD /* PBXContainerItemProxy */;
+		};
+		CC744D29A7814A99A6CDBB12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F2C75305F514CDBB6BEDD0B /* ZERO_CHECK */;
+			targetProxy = 8453FCCD5E164CDA9DDD7B9D /* PBXContainerItemProxy */;
+		};
+		EFC140B4C7634084BA54E58D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACC41F04BC1B40A2900F14B1 /* justvpndesktop_autogen */;
+			targetProxy = FEB9C82B54CF4D13B36B51E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02D22FE89FB44E30B82C95CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		03523666A6814F5F8F02E5D4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = justvpndesktop_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		046E8FD65F8B4486A4CBEB0A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		0AE0284C0A1C4E7799C7CDC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = /Users/john/dev/justvpndesktop/build;
+			};
+			name = Debug;
+		};
+		2475EB4875BC4D218641CBA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = justvpndesktop_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		301960A5B8794905BE0E5C86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = /Users/john/dev/justvpndesktop/build;
+			};
+			name = Release;
+		};
+		32D385BB6B4C4690876B3EA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/john/Qt/6.2.3/macos/lib,
+					"$(inherited)",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WIDGETS_LIB,
+					QT_CORE_LIB,
+					QT_NO_DEBUG,
+					QT_GUI_LIB,
+					QT_NETWORK_LIB,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/dev/justvpndesktop,
+					/Users/john/dev/justvpndesktop/justvpndesktop_autogen/include_Release,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/Users/john/Qt/6.2.3/macos/lib,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-F",
+					/Users/john/Qt/6.2.3/macos/lib,
+					"-framework",
+					QtWidgets,
+					"-framework",
+					QtNetwork,
+					"-framework",
+					QtGui,
+					"-framework",
+					OpenGL,
+					"-framework",
+					AGL,
+					"-framework",
+					AppKit,
+					"-framework",
+					ImageIO,
+					"-framework",
+					Metal,
+					"-framework",
+					QtCore,
+					"-framework",
+					DiskArbitration,
+					"-framework",
+					IOKit,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = justvpndesktop;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/Users/john/Qt/6.2.3/macos/lib/QtWidgets.framework/Headers,
+					/Users/john/Qt/6.2.3/macos/lib/QtCore.framework/Headers,
+					"/Users/john/Qt/6.2.3/macos/mkspecs/macx-clang",
+					/Users/john/Qt/6.2.3/macos/include,
+					/Users/john/Qt/6.2.3/macos/lib/QtGui.framework/Headers,
+					/Users/john/Qt/6.2.3/macos/lib/QtNetwork.framework/Headers,
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		382EC68964434928AC90941F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		3AB9A609B3FD497D875FC16A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		588DA56CAF8B42F28F30F46B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = justvpndesktop_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		610AD81A5DA34B949FF38A9E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = /Users/john/dev/justvpndesktop/build;
+			};
+			name = MinSizeRel;
+		};
+		6341596F2D894D08BA2F3A3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		6D72EB1CC09B4471B377AA2E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = /Users/john/dev/justvpndesktop/build;
+			};
+			name = RelWithDebInfo;
+		};
+		7AD48DDF11BA4909BA22E0F7 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/john/Qt/6.2.3/macos/lib,
+					"$(inherited)",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WIDGETS_LIB,
+					QT_CORE_LIB,
+					QT_NO_DEBUG,
+					QT_GUI_LIB,
+					QT_NETWORK_LIB,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/dev/justvpndesktop,
+					/Users/john/dev/justvpndesktop/justvpndesktop_autogen/include_RelWithDebInfo,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/Users/john/Qt/6.2.3/macos/lib,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-F",
+					/Users/john/Qt/6.2.3/macos/lib,
+					"-framework",
+					QtWidgets,
+					"-framework",
+					QtNetwork,
+					"-framework",
+					QtGui,
+					"-framework",
+					OpenGL,
+					"-framework",
+					AGL,
+					"-framework",
+					AppKit,
+					"-framework",
+					ImageIO,
+					"-framework",
+					Metal,
+					"-framework",
+					QtCore,
+					"-framework",
+					DiskArbitration,
+					"-framework",
+					IOKit,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = justvpndesktop;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/Users/john/Qt/6.2.3/macos/lib/QtWidgets.framework/Headers,
+					/Users/john/Qt/6.2.3/macos/lib/QtCore.framework/Headers,
+					"/Users/john/Qt/6.2.3/macos/mkspecs/macx-clang",
+					/Users/john/Qt/6.2.3/macos/include,
+					/Users/john/Qt/6.2.3/macos/lib/QtGui.framework/Headers,
+					/Users/john/Qt/6.2.3/macos/lib/QtNetwork.framework/Headers,
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		8764206E0E9441869CA73D93 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		8EA9F1050E564609A999CFBC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		A785E7265105487CB55619E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		AED09A9EEB1A437397954A95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/john/Qt/6.2.3/macos/lib,
+					"$(inherited)",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WIDGETS_LIB,
+					QT_CORE_LIB,
+					QT_GUI_LIB,
+					QT_NETWORK_LIB,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/dev/justvpndesktop,
+					/Users/john/dev/justvpndesktop/justvpndesktop_autogen/include_Debug,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/Users/john/Qt/6.2.3/macos/lib,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++17' ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-F",
+					/Users/john/Qt/6.2.3/macos/lib,
+					"-framework",
+					QtWidgets,
+					"-framework",
+					QtNetwork,
+					"-framework",
+					QtGui,
+					"-framework",
+					OpenGL,
+					"-framework",
+					AGL,
+					"-framework",
+					AppKit,
+					"-framework",
+					ImageIO,
+					"-framework",
+					Metal,
+					"-framework",
+					QtCore,
+					"-framework",
+					DiskArbitration,
+					"-framework",
+					IOKit,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = justvpndesktop;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/Users/john/Qt/6.2.3/macos/lib/QtWidgets.framework/Headers,
+					/Users/john/Qt/6.2.3/macos/lib/QtCore.framework/Headers,
+					"/Users/john/Qt/6.2.3/macos/mkspecs/macx-clang",
+					/Users/john/Qt/6.2.3/macos/include,
+					/Users/john/Qt/6.2.3/macos/lib/QtGui.framework/Headers,
+					/Users/john/Qt/6.2.3/macos/lib/QtNetwork.framework/Headers,
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		B4575B97363B40DE994668B0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/john/Qt/6.2.3/macos/lib,
+					"$(inherited)",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WIDGETS_LIB,
+					QT_CORE_LIB,
+					QT_NO_DEBUG,
+					QT_GUI_LIB,
+					QT_NETWORK_LIB,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/dev/justvpndesktop,
+					/Users/john/dev/justvpndesktop/justvpndesktop_autogen/include_MinSizeRel,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/Users/john/Qt/6.2.3/macos/lib,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-F",
+					/Users/john/Qt/6.2.3/macos/lib,
+					"-framework",
+					QtWidgets,
+					"-framework",
+					QtNetwork,
+					"-framework",
+					QtGui,
+					"-framework",
+					OpenGL,
+					"-framework",
+					AGL,
+					"-framework",
+					AppKit,
+					"-framework",
+					ImageIO,
+					"-framework",
+					Metal,
+					"-framework",
+					QtCore,
+					"-framework",
+					DiskArbitration,
+					"-framework",
+					IOKit,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = justvpndesktop;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/Users/john/Qt/6.2.3/macos/lib/QtWidgets.framework/Headers,
+					/Users/john/Qt/6.2.3/macos/lib/QtCore.framework/Headers,
+					"/Users/john/Qt/6.2.3/macos/mkspecs/macx-clang",
+					/Users/john/Qt/6.2.3/macos/include,
+					/Users/john/Qt/6.2.3/macos/lib/QtGui.framework/Headers,
+					/Users/john/Qt/6.2.3/macos/lib/QtNetwork.framework/Headers,
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		E7A7F5D0F67E4751AAC7CCFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = justvpndesktop_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/dev/justvpndesktop;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39C23747F2644ED9A1B582E6 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6341596F2D894D08BA2F3A3B /* Debug */,
+				02D22FE89FB44E30B82C95CF /* Release */,
+				8764206E0E9441869CA73D93 /* MinSizeRel */,
+				046E8FD65F8B4486A4CBEB0A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		48A6411062D64231A67FA675 /* Build configuration list for PBXAggregateTarget "justvpndesktop_autogen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2475EB4875BC4D218641CBA1 /* Debug */,
+				E7A7F5D0F67E4751AAC7CCFB /* Release */,
+				03523666A6814F5F8F02E5D4 /* MinSizeRel */,
+				588DA56CAF8B42F28F30F46B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C761F94556994B3CBF4C9C7C /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A785E7265105487CB55619E3 /* Debug */,
+				3AB9A609B3FD497D875FC16A /* Release */,
+				8EA9F1050E564609A999CFBC /* MinSizeRel */,
+				382EC68964434928AC90941F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DD54D34633B346D3A47EA17F /* Build configuration list for PBXProject "justvpndesktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AE0284C0A1C4E7799C7CDC5 /* Debug */,
+				301960A5B8794905BE0E5C86 /* Release */,
+				610AD81A5DA34B949FF38A9E /* MinSizeRel */,
+				6D72EB1CC09B4471B377AA2E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F5D1C20E8E574C2CBC291DAD /* Build configuration list for PBXNativeTarget "justvpndesktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED09A9EEB1A437397954A95 /* Debug */,
+				32D385BB6B4C4690876B3EA5 /* Release */,
+				B4575B97363B40DE994668B0 /* MinSizeRel */,
+				7AD48DDF11BA4909BA22E0F7 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49BDF375B1764F5AAA9E8EAF /* Project object */;
+}

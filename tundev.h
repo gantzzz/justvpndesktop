@@ -26,6 +26,7 @@
 using namespace std;
 
 extern string m_sRootPassword = "";
+extern string m_sDefaultRoute = ""; // system default route
 
 namespace tundev
 {
@@ -55,7 +56,7 @@ namespace tundev
         addr.sc_family = AF_SYSTEM;
         addr.ss_sysaddr = AF_SYS_CONTROL;
         addr.sc_id = info.ctl_id;
-        addr.sc_unit = 99;
+        addr.sc_unit = 101;
 
         err = connect(fd, (struct sockaddr *)&addr, sizeof (addr));
         if (err != 0)
@@ -129,15 +130,46 @@ namespace tundev
         }
     }
 
-    static void unset_default_route(string sRoute)
+    static void unprotect(string sAddr)
     {
+        string sCmd = string("echo ") + m_sRootPassword + " | " + string("sudo -S ") + string("route delete ") + sAddr;
+        std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(sCmd.c_str(), "r"), pclose);
         
+        std::array<char, 1024> buffer;
+        std::string line;
+
+        if (!pipe)
+        {
+            throw std::runtime_error("popen() failed!");
+        }
+        while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr)
+        {
+            line = buffer.data();
+        }
     }
 
     static void set_tun_address(string sAddr)
     {
-        auto defaultGW = get_default_gateway();
-        string sCmd = string("echo ") + m_sRootPassword + " | " + string("sudo -S ") + string("ifconfig utun98 up ") + sAddr + " " + sAddr;
+        m_sDefaultRoute = get_default_gateway();
+        string sCmd = string("echo ") + m_sRootPassword + " | " + string("sudo -S ") + string("ifconfig utun100 up ") + sAddr + " " + sAddr;
+        std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(sCmd.c_str(), "r"), pclose);
+        
+        std::array<char, 1024> buffer;
+        std::string line;
+
+        if (!pipe)
+        {
+            throw std::runtime_error("popen() failed!");
+        }
+        while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr)
+        {
+            line = buffer.data();
+        }
+    }
+
+    static void unset_default_route()
+    {
+        string sCmd = string("echo ") + m_sRootPassword + " | " + string("sudo -S ") + string("route -n delete default");
         std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(sCmd.c_str(), "r"), pclose);
         
         std::array<char, 1024> buffer;
@@ -155,12 +187,8 @@ namespace tundev
 
     static void set_default_route(string sAddr)
     {
-        
-    }
-
-    static void set_ip_forward()
-    {
-        string sCmd = string("echo ") + m_sRootPassword + " | " + string("sudo -S sysctl -w net.inet.ip.forwarding=1");
+        unset_default_route();
+        string sCmd = string("echo ") + m_sRootPassword + " | " + string("sudo -S ") + string("route add default ") + sAddr;
         std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(sCmd.c_str(), "r"), pclose);
         
         std::array<char, 1024> buffer;
@@ -174,14 +202,14 @@ namespace tundev
         {
             line = buffer.data();
         }
-        
-        
-        
     }
 
-    static int set_iptables_masquerade()
+    static void restore_default_route()
     {
-        
+        if (!m_sDefaultRoute.empty())
+        {
+            set_default_route(m_sDefaultRoute);
+        }
     }
 
 
@@ -391,68 +419,6 @@ namespace tundev
         }
 
         return fd;
-    }
-
-    static void set_ip_forward()
-    {
-        bool bIpForwardSet = false;
-        fstream proc;
-        proc.open("/proc/sys/net/ipv4/ip_forward", ios::in);
-        if (proc.is_open())
-        {
-            string data;
-
-            while (getline(proc, data))
-            {
-                if (stoi(data) == 1)
-                {
-                    bIpForwardSet = true;
-                    break;
-                }
-            }
-            if (!bIpForwardSet)
-            {
-                system("echo 1 > /proc/sys/net/ipv4/ip_forward");
-            }
-            proc.close();
-        }
-    }
-
-    static void set_iptables_masquerade()
-    {
-        bool bNatEnabled = false;
-        char network[13] = { 0 };
-        sprintf(network, TUN_NET, 0);
-        std::array<char, 1024> buffer;
-        std::string line;
-        std::unique_ptr<FILE, decltype(&pclose)> pipe(popen("iptables --list -t nat", "r"), pclose);
-
-        if (!pipe)
-        {
-            throw std::runtime_error("popen() failed!");
-        }
-        while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr)
-        {
-            line = buffer.data();
-            if (line.find("MASQUERADE") != string::npos) // this is masquerade line
-            {
-                // see if the network is correct
-                if (line.find(network) != string::npos)
-                {
-                    bNatEnabled = true;
-                    break;
-                }
-            }
-        }
-
-        // add nat rule for the network
-        if (!bNatEnabled)
-        {
-            char cmd[256] = { 0 };
-            sprintf(cmd, "iptables -t nat -A POSTROUTING -s %s/8 -o eth0 -j MASQUERADE", network);
-            system(cmd);
-        }
-
     }
 
 #endif // ifdef __APPLE__

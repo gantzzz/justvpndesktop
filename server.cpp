@@ -40,8 +40,9 @@ bool Server::handshake(QString serverAddress)
         StopProcessingThread();
 
         delete m_pSocket;
-
-        tundev::unset_default_route(m_sAddress.toStdString());
+        tundev::unprotect(m_sServerAddress.toStdString());
+        tundev::restore_default_route();
+        
     }
 
     m_sServerAddress = serverAddress;
@@ -63,11 +64,10 @@ void Server::processControlMessage(const QString& sControlMsg)
 {
     if (sControlMsg.contains("action:connected"))
     {
-        if (m_nTunnelFD > 0)
+        if (m_nTunnelFD < 0)
         {
-            close(m_nTunnelFD);
+            m_nTunnelFD = tundev::open_tun_socket();
         }
-        m_nTunnelFD = tundev::open_tun_socket();
     }
     else if (sControlMsg.contains("mtu") &&
              sControlMsg.contains("route"))
@@ -93,8 +93,6 @@ void Server::processControlMessage(const QString& sControlMsg)
         tundev::protect(m_sServerAddress.toStdString());
         tundev::set_tun_address(m_sAddress.toStdString());
         tundev::set_default_route(m_sAddress.toStdString());
-        tundev::set_ip_forward();
-        tundev::set_iptables_masquerade();
         
         string control = " action:configured";
         control[0] = 0;
@@ -141,6 +139,15 @@ void Server::processForwarding()
             if (FD_ISSET(m_nTunnelFD, &fdset))
             {
                 length = read(m_nTunnelFD, packet, sizeof(packet));
+
+#ifdef __APPLE__
+                // drop first 4 bytes on apple devices as there's no option to create tun device with IFF_NO_PI flag on
+                length -= 4;
+                for (int i = 0; i < length; i++)
+                {
+                    packet[i] = packet[i+4];
+                }
+#endif
                 if (length > 0)
                 {
                     m_pSocket->writeDatagram(packet, length ,QHostAddress(m_sServerAddress), 8811 );
@@ -178,6 +185,14 @@ void Server::onSocketReadyRead()
         else
         {
             // to tunnel
+#ifdef __APPLE__
+            char prep = 0x2;
+            data.prepend(prep);
+            prep = 0x00;
+            data.prepend(prep);
+            data.prepend(prep);
+            data.prepend(prep);
+#endif
             write(m_nTunnelFD, data, data.size());
         }
     }
